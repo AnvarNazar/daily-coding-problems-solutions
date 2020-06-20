@@ -7,4 +7,8 @@ function(COMPILE_FILE FILE)
     add_executable(${FILE} ${FILE}.cpp)
 endfunction(COMPILE_FILE)
 
-COMPILE_FILE(001_array_sum)
+set(SOURCES 001_array_sum 002_array_product)
+
+foreach (SOURCE ${SOURCES})
+    COMPILE_FILE(${SOURCE})
+endforeach (SOURCE)
